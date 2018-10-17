@@ -419,6 +419,145 @@
                             </tbody>
                         </table>
                     </article>
+                    
+                    <!-- 포트폴리오 엔트리: EBDMS 헌혈증서 사용 -->
+                    <article role="article" id="work1" class="gallery-item" data-animation="fade-left">
+                        <figure role="group" class="gallery-figure">
+                            <div class="gallery-image">
+                                <img class="gallery-image-thumb" src="./img/example5.png" alt="EBDMS헌혈증서사용" aria-describedby="work1Description">
+                            </div>
+                            <figcaption class="gallery-caption">
+                                <h3 class="gallery-title">EBDMS : 전자 헌혈증서 사용처리</h3>
+                                <ul class="gallery-spec">
+                                    <li class="gallery-spec-item"><strong class="gallery-spec-key">UI/DESIGN</strong> <span class="gallery-spec-value">이진영</span></li>
+                                    <li class="gallery-spec-item"><strong class="gallery-spec-key">SERVER-SIDE</strong> <span class="gallery-spec-value">이진영</span></li>
+                                </ul>
+                                <div id="work1Description">
+                                    <p>전자 헌혈증서 사용처리에는 두 가지 접근방법이 있습니다.</p>
+                                    <p>첫째, [내 헌혈증]-[헌혈증 사용처리] 메뉴 접근<br/>둘째, EBDMS 사용자에게 QR-Code를 제공받아 URL로 이동</p>
+                                    <p>위 두 가지 접근방법은 '의료기관 승인'이 되어 권한을 부여받은 사용자만 접근이 가능합니다.</p>
+                                    <p>메뉴를 통해 접근 시, 전자헌혈증서 번호를 입력하여 헌혈증 정보를 조회하며 '검증'버튼을 통해 실제 헌혈증 소유자 계정을 입력받습니다.</p>
+                                    <p>QR-Code를 통해 접근 시, GET방식으로 헌혈증서 번호를 넘겨주어 헌혈증서 정보를 조회합니다.</p>
+                                    <p>검증 절차가 완료된 헌혈증서는 '사용처리'가 가능하며, 의료기관 사용자는 이를 철회할 수 없습니다.</p>
+                                </div>
+                                <div class="ui-group">
+                                    <a role="button" class="ui-button" href="https://github.com/TRUEYOUNG/EBDMS" target="_blank">Repository</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <table class="gallery-table">
+                            <thead>
+                                <tr>
+                                    <th class="gallery-table-col category">Category</th>
+                                    <th class="gallery-table-col source">Source</th>
+                                    <th class="gallery-table-col keywords">Related keywords</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-th="Category"><span class="categ html">JSP</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/my_docs/use_blood_docs.jsp" target="_blank">use_blood_docs.jsp</a> / 
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/my_docs/use_success.jsp" target="_blank">use_success.jsp</a>
+                                    </td>
+                                    <td data-th="Related Keywords">SweetAlert</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/controller/mydocs/UseDocsController.java" target="_blank">UseDocsController.java</a></td>
+                                    <td data-th="Related Keywords">GET</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/service/mydocs/UseDocsService.java" target="_blank">UseDocsService.java</a></td>
+                                    <td data-th="Related Keywords">업무로직 Service</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/mydocs/UseDocsDAO.java" target="_blank">UseDocsDAO.java</a></td>
+                                    <td data-th="Related Keywords">SqlSessionTemplate</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ js">XML</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/mydocs/UseDocsMapper.xml" target="_blank">UseDocsMapper.xml</a></td>
+                                    <td data-th="Related Keywords">헌혈증서 정보조회, 헌혈증서 유효성 검사, 헌혈증서 사용처리(데이터입력)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                    
+                    <!-- 포트폴리오 엔트리: EBDMS로그인(관리자) -->
+                    <article role="article" id="work2" class="gallery-item" data-animation="fade-right">
+                        <figure role="group" class="gallery-figure">
+                            <div class="gallery-image">
+                                <img class="gallery-image-thumb" src="./img/admin1.png" alt="EBDMS_ADMIN" aria-describedby="work2Description">
+                            </div>
+                            <figcaption class="gallery-caption">
+                                <h3 class="gallery-title">EBDMS ADMIN : 관리자 로그인</h3>
+                                <ul class="gallery-spec">
+									<li class="gallery-spec-item"><strong class="gallery-spec-key">UI/DESIGN</strong> <span class="gallery-spec-value">이진영</span></li>
+                                    <li class="gallery-spec-item"><strong class="gallery-spec-key">SERVER-SIDE</strong> <span class="gallery-spec-value">이진영</span></li>
+                                    </li>
+                                </ul>
+                                <div id="work2Description">
+                                    <p>관리자 페이지는 기존 EBDMS와 차별을 주기위해 LOGO의 채도를 없애고 비교적 간단한 UI구성을 보입니다.</p>
+                                    <p>일반사용자 세션과 별도의 관리자 세션을 사용하여 분리하였습니다.</p>
+                                    <p>관리자의 기능은 공지사항관리/양도게시판 관리/사용자관리(정지, 헌혈증, 의료기관 승인)/1:1문의관리 등이 있습니다.</p>
+                                </div>
+                                <div class="ui-group">
+                                    <a role="button" class="ui-button" href="https://github.com/TRUEYOUNG/EBDMS" target="_blank">Repository</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <table class="gallery-table">
+                            <thead>
+                                <tr>
+                                    <th class="gallery-table-col category">Category</th>
+                                    <th class="gallery-table-col source">Source</th>
+                                    <th class="gallery-table-col keywords">Related keywords</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                           	  	<tr>
+                                    <td data-th="Category"><span class="categ html">HTML</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/admin_index.html" target="_blank">admin_index.html</a></td>
+                                    <td data-th="Related Keywords">진입점</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ html">JSP</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/admin/login/admin_login.jsp" target="_blank">admin_login.jsp</a>
+                                    </td>
+                                    <td data-th="Related Keywords">AJAX, JSON, SweetAlert</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/admin/controller/login/AdminLogin.java" target="_blank">AdminLogin.java</a>
+                                    </td>
+                                    <td data-th="Related Keywords">GET/POST, ValidCheck</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/admin/service/login/LoginService.java" target="_blank">LoginService.java</a></td>
+                                    <td data-th="Related Keywords">업무로직 Service</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/admin/dao/login/LoginDAO.java" target="_blank">LoginDAO.java</a></td>
+                                    <td data-th="Related Keywords">SqlSessionTemplate</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ js">XML</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/admin/dao/login/loginMapper.xml" target="_blank">loginMapper.xml</a></td>
+                                    <td data-th="Related Keywords">비밀번호 대조</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
 
                     
                 </div>
@@ -483,9 +622,11 @@
                             --></span><!--
                         --></li>
                         <li><!--
-                            --><span title="블로그"><!--
-                                --><i class="fi icon-speech-bubble-5"></i><!--
-                                --><span class="iconed-text">blog.naver.com/macie</span><!--
+                            --><span title="블로그">
+                            		<a href="https://blog.naver.com/macie" target="_blank">
+                            		<i class="fi icon-speech-bubble-5"></i><!--
+                                --><span class="iconed-text">trueyoung.blog</span>
+                                </a><!--
                             --></span><!--
                         --></li>
                         <li><!--
