@@ -228,12 +228,11 @@
                                     </li>
                                 </ul>
                                 <div id="work2Description">
-                                    <p><a href="http://www.kma.go.kr/index.jsp" target="_blank">기상청</a> 사이트의 대문을 리뉴얼해 보았습니다. 인터페이스용 그림에는 SVG를 적극적으로 활용했고, 백업 png를 병용했습니다.</p>
-                                    <p>공공기관 사이트로서 보다 많은 사용자 환경에 대응하기 위해 익스플로러 8까지의 호환성 지원, 웹 접근성 관리가 되어 있습니다.</p>
+                                    <p>먼저 회원가입의 경우, ID중복확인 유효성체크를 적용하였고 비밀번호의 경우에는 평문으로 입력받은 값을 복호화가 불가능한 <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/util/HashAlgorithm.java">SHA256 암호화</a>하여 DB에 저장하였습니다.</p>
+                                    <p>마찬가지로 로그인 할 경우, 입력된 평문 비밀번호를 암호화하여 DBMS의 데이터와 대조하여 유효성검사를 수행하였고, 이를 통과하면 ID Session을 부여했습니다.</p>
                                 </div>
                                 <div class="ui-group">
-                                    <a role="button" class="ui-button" href="./Portfolio-KMA/" target="_blank">Demo</a>
-                                    <a role="button" class="ui-button" href="https://github.com/findawayer/Portfolio-KMA/tree/gh-pages" target="_blank">Repos</a>
+                                    <a role="button" class="ui-button" href="https://github.com/TRUEYOUNG/EBDMS" target="_blank">Repository</a>
                                 </div>
                             </figcaption>
                         </figure>
@@ -247,34 +246,32 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td data-th="Category"><span class="categ html">HTML</span></td>
-                                    <td data-th="Source"><a href="https://github.com/findawayer/Portfolio-KMA/blob/gh-pages/index.html" target="_blank">index.html</a></td>
-                                    <td data-th="Related Keywords">HTML5, ARIA, SVG</td>
+                                    <td data-th="Category"><span class="categ html">JSP</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/user/login.jsp" target="_blank">login.jsp</a> / 
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/user/sign_up_register_agree.jsp" target="_blank">sign_up_register_agree.jsp</a>
+                                    </td>
+                                    <td data-th="Related Keywords">AJAX, JSON, SweetAlert</td>
                                 </tr>
                                 <tr>
-                                    <td data-th="Category"><span class="categ css">CSS</span></td>
-                                    <td data-th="Source"><a href="https://github.com/findawayer/Portfolio-KMA/blob/gh-pages/scss/style.scss" target="_blank">style.scss</a></td>
-                                    <td data-th="Related Keywords">CSS3, Sass, Compass</td>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/controller/main/Main.java" target="_blank">Main.java</a></td>
+                                    <td data-th="Related Keywords">GET/POST</td>
                                 </tr>
                                 <tr>
-                                    <td data-th="Category"><span class="categ css">CSS</span></td>
-                                    <td data-th="Source"><a href="https://github.com/findawayer/Portfolio-KMA/tree/gh-pages/scss/partials" target="_blank">Sass partials</a></td>
-                                    <td data-th="Related Keywords">CSS3, Sass, Compass, CSS sprite</td>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/service/main/MainService.java" target="_blank">MainService.java</a></td>
+                                    <td data-th="Related Keywords">업무로직 Service</td>
                                 </tr>
                                 <tr>
-                                    <td data-th="Category"><span class="categ js">JS</span></td>
-                                    <td data-th="Source"><a href="https://github.com/findawayer/Portfolio-KMA/blob/gh-pages/js/common.js" target="_blank">common.js</a></td>
-                                    <td data-th="Related Keywords">JavaScript, jQuery 1, <a href="https://modernizr.com/" target="_blank">Modernizr</a></td>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/main/MainDAO.java" target="_blank">MainDAO.java</a></td>
+                                    <td data-th="Related Keywords">SqlSessionTemplate</td>
                                 </tr>
                                 <tr>
-                                    <td data-th="Category"><span class="categ js">JS</span></td>
-                                    <td data-th="Source"><a href="https://github.com/findawayer/Portfolio-KMA/blob/gh-pages/js/main.js" target="_blank">main.js</a></td>
-                                    <td data-th="Related Keywords">JavaScript, jQuery 1, jQuery UI, AJAX</td>
-                                </tr>
-                                <tr>
-                                    <td data-th="Category"><span class="categ js">JSON</span></td>
-                                    <td data-th="Source"><a href="https://github.com/findawayer/Portfolio-KMA/blob/gh-pages/json/meteo.json" target="_blank">meteo.json</a></td>
-                                    <td data-th="Related Keywords">JSON</td>
+                                    <td data-th="Category"><span class="categ js">XML</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/main/MainMapper.xml" target="_blank">MainMapper.xml</a></td>
+                                    <td data-th="Related Keywords">최근 게시글(양도게시판/공지사항) 조회</td>
                                 </tr>
                             </tbody>
                         </table>
