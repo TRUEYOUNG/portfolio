@@ -228,7 +228,7 @@
                                     </li>
                                 </ul>
                                 <div id="work2Description">
-                                    <p>먼저 회원가입의 경우, ID중복확인 유효성체크를 적용하였고 비밀번호의 경우에는 평문으로 입력받은 값을 복호화가 불가능한 <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/util/HashAlgorithm.java">SHA256 암호화</a>하여 DB에 저장하였습니다.</p>
+                                    <p>먼저 회원가입의 경우, ID중복확인 유효성체크를 적용하였고 비밀번호의 경우에는 평문으로 입력받은 값을 복호화가 불가능한 <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/util/HashAlgorithm.java">SHA256 암호화</a>하여 DBMS에 저장하였습니다.</p>
                                     <p>마찬가지로 로그인 할 경우, 입력된 평문 비밀번호를 암호화하여 DBMS의 데이터와 대조하여 유효성검사를 수행하였고, 이를 통과하면 ID Session을 부여했습니다.</p>
                                 </div>
                                 <div class="ui-group">
@@ -249,9 +249,83 @@
                                     <td data-th="Category"><span class="categ html">JSP</span></td>
                                     <td data-th="Source">
                                     <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/user/login.jsp" target="_blank">login.jsp</a> / 
-                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/user/sign_up_register_agree.jsp" target="_blank">sign_up_register_agree.jsp</a>
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/user/sign_up_input_info.jsp" target="_blank">sign_up_input_info.jsp</a>
                                     </td>
                                     <td data-th="Related Keywords">AJAX, JSON, SweetAlert</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/util/HashAlgorithm.java" target="_blank">HashAlgorithm.java</a>
+                                    </td>
+                                    <td data-th="Related Keywords">HashAlgorithm, SHA256, MD5</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/controller/user/Welcome.java" target="_blank">Welcome.java</a>
+                                    </td>
+                                    <td data-th="Related Keywords">GET/POST, ValidCheck</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/service/user/WelcomeService.java" target="_blank">WelcomeService.java</a></td>
+                                    <td data-th="Related Keywords">업무로직 Service</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/user/WelcomeDAO.java" target="_blank">WelcomeDAO.java</a></td>
+                                    <td data-th="Related Keywords">SqlSessionTemplate</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ js">XML</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/user/WelcomeMapper.xml" target="_blank">WelcomeMapper.xml</a></td>
+                                    <td data-th="Related Keywords">ID중복 확인,비밀번호 대조, 계정 등록</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                    
+                    <!-- 포트폴리오 엔트리: EBDMS 헌혈증서 등록 -->
+                    <article role="article" id="work1" class="gallery-item" data-animation="fade-left">
+                        <figure role="group" class="gallery-figure">
+                            <div class="gallery-image">
+                                <img class="gallery-image-thumb" src="./img/example3.png" alt="EBDMS헌혈증등록" aria-describedby="work1Description">
+                            </div>
+                            <figcaption class="gallery-caption">
+                                <h3 class="gallery-title">EBDMS : 전자 헌혈증서 등록</h3>
+                                <ul class="gallery-spec">
+                                    <li class="gallery-spec-item"><strong class="gallery-spec-key">UI/DESIGN</strong> <span class="gallery-spec-value">이진영</span></li>
+                                    <li class="gallery-spec-item"><strong class="gallery-spec-key">SERVER-SIDE</strong> <span class="gallery-spec-value">이진영</span></li>
+                                </ul>
+                                <div id="work1Description">
+                                    <p>오프라인 헌혈증서의 형상을 WEB PAGE에서 그대로 구현하여 이질감이 없도록 유도하였고 HTML컨트롤러의 값이 변동되는 즉시 우측의 헌혈증서에 값이 기재됩니다.</p>
+                                    <p>기부단체는 <a href="https://www.data.go.kr/dataset/3036287/fileData.do">공공데이터포털의 전국헌혈의 집 JSON 데이터</a>를 활용하여 DBMS에 입력하였으며 이를 AJAX를 통해 비동기 방식으로 select컨트롤러에 값을 할당하였습니다.</p>
+                                    <p>등록된 헌혈증서는 식별가능한 헌혈증서 번호로 <a href="https://developers.google.com/chart/infographics/docs/qr_codes">QR-Code</a>가 발급됩니다. 이를 통해 의료기관에서 사용처리할 수 있습니다.</p>
+                                </div>
+                                <div class="ui-group">
+                                    <a role="button" class="ui-button" href="https://github.com/TRUEYOUNG/EBDMS" target="_blank">Repository</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <table class="gallery-table">
+                            <thead>
+                                <tr>
+                                    <th class="gallery-table-col category">Category</th>
+                                    <th class="gallery-table-col source">Source</th>
+                                    <th class="gallery-table-col keywords">Related keywords</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-th="Category"><span class="categ html">HTML</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/index.html" target="_blank">index.html</a></td>
+                                    <td data-th="Related Keywords">진입점</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ html">JSP</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/main.jsp" target="_blank">main.jsp</a></td>
+                                    <td data-th="Related Keywords">jstl</td>
                                 </tr>
                                 <tr>
                                     <td data-th="Category"><span class="categ css">JAVA</span></td>
@@ -278,7 +352,6 @@
                     </article>
 
                     
-                    </article>
                 </div>
             </div>
         </section>
