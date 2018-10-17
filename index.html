@@ -227,6 +227,7 @@
                                 <div id="work2Description">
                                     <p>먼저 회원가입의 경우, ID중복확인 유효성체크를 적용하였고 비밀번호의 경우에는 평문으로 입력받은 값을 복호화가 불가능한 <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/util/HashAlgorithm.java">SHA256 암호화</a>하여 DBMS에 저장하였습니다.</p>
                                     <p>마찬가지로 로그인 할 경우, 입력된 평문 비밀번호를 암호화하여 DBMS의 데이터와 대조하여 유효성검사를 수행하였고, 이를 통과하면 ID Session을 부여했습니다.</p>
+                                    <p>또한 회원가입 완료페이지에서 Flag Session을 생성하여 새로고침 시 DB의 Primary Key제약조건 위배되는 상황을 방지했습니다.</p>
                                 </div>
                                 <div class="ui-group">
                                     <a role="button" class="ui-button" href="https://github.com/TRUEYOUNG/EBDMS" target="_blank">Repository</a>
@@ -299,6 +300,7 @@
                                     <p>오프라인 헌혈증서의 형상을 WEB PAGE에서 그대로 구현하여 이질감이 없도록 유도하였고 HTML컨트롤러의 값이 변동되는 즉시 우측의 헌혈증서에 값이 기재됩니다.</p>
                                     <p>기부단체는 <a href="https://www.data.go.kr/dataset/3036287/fileData.do">공공데이터포털의 전국헌혈의 집 JSON 데이터</a>를 활용하여 DBMS에 입력하였으며 이를 AJAX를 통해 비동기 방식으로 select컨트롤러에 값을 할당하였습니다.</p>
                                     <p>등록된 헌혈증서는 식별가능한 헌혈증서 번호로 <a href="https://developers.google.com/chart/infographics/docs/qr_codes">QR-Code</a>가 발급됩니다. 이를 통해 의료기관에서 사용처리할 수 있습니다.</p>
+                                    <p>좌측의 사이드메뉴바 검색창은 google 검샌엔진API를 사용하여 외부로의 확장성을 확보했습니다.</p>
                                 </div>
                                 <div class="ui-group">
                                     <a role="button" class="ui-button" href="https://github.com/TRUEYOUNG/EBDMS" target="_blank">Repository</a>
@@ -324,23 +326,95 @@
                                 </tr>
                                 <tr>
                                     <td data-th="Category"><span class="categ css">JAVA</span></td>
-                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/controller/mydocs/RegisterDocsController.java" target="_blank">RegisterDocsController.java</a></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/controller/mydocs/RegisterDocsController.java" target="_blank">RegisterDocsController.java</a></td>
                                     <td data-th="Related Keywords">GET</td>
                                 </tr>
                                 <tr>
                                     <td data-th="Category"><span class="categ css">JAVA</span></td>
-                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/service/main/MainService.java" target="_blank">MainService.java</a></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/service/mydocs/RegisterDocsService.java" target="_blank">RegisterDocsService.java</a></td>
                                     <td data-th="Related Keywords">업무로직 Service</td>
                                 </tr>
                                 <tr>
                                     <td data-th="Category"><span class="categ css">JAVA</span></td>
-                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/main/MainDAO.java" target="_blank">MainDAO.java</a></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/mydocs/RegisterDocsDAO.java" target="_blank">RegisterDocsDAO.java</a></td>
                                     <td data-th="Related Keywords">SqlSessionTemplate</td>
                                 </tr>
                                 <tr>
                                     <td data-th="Category"><span class="categ js">XML</span></td>
-                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/main/MainMapper.xml" target="_blank">MainMapper.xml</a></td>
-                                    <td data-th="Related Keywords">최근 게시글(양도게시판/공지사항) 조회</td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/mydocs/RegisterMapper.xml" target="_blank">RegisterMapper.xml</a></td>
+                                    <td data-th="Related Keywords">헌혈의집 지역/센터명 조회, 헌혈증서 번호 중복확인, 헌혈증서 입력</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                    
+                     <!-- 포트폴리오 엔트리: EBDMS 로그인 -->
+                    <article role="article" id="work2" class="gallery-item" data-animation="fade-right">
+                        <figure role="group" class="gallery-figure">
+                            <div class="gallery-image">
+                                <img class="gallery-image-thumb" src="./img/example4.png" alt="EBDMS의료기관 신청" aria-describedby="work2Description">
+                            </div>
+                            <figcaption class="gallery-caption">
+                                <h3 class="gallery-title">EBDMS : 의료기관(인) 권한 신청</h3>
+                                <ul class="gallery-spec">
+									<li class="gallery-spec-item"><strong class="gallery-spec-key">UI/DESIGN</strong> <span class="gallery-spec-value">강지형</span></li>
+                                    <li class="gallery-spec-item"><strong class="gallery-spec-key">SERVER-SIDE</strong> <span class="gallery-spec-value">이진영</span></li>
+                                    </li>
+                                </ul>
+                                <div id="work2Description">
+                                    <p>전자 헌혈증서에 대해 사용처리를 하기 위해서는 관리자에 의한 사전 의료기관 권한 승인이 필요 합니다.</p>
+                                    <p>의료기관 권한 신청을 위해 정보를 입력하여 DBMS에 저장하며 이는 추후 관리자에 의해 승인/반려 됩니다.</p>
+                                    <p>이미 승인처리 된 사용자는 alert가 노출되며, 정보에 대해 수정할 수 없게 구현하였습니다.</p>
+                                    <p>최초 신청자는 데이터 insert를 수행하고, 기신청자는 update를 수행합니다.</p>
+                                    <p>회원가입과 동일한 형태로 insert 중복방지 로직을 구현했습니다.</p>
+                                    
+                                </div>
+                                <div class="ui-group">
+                                    <a role="button" class="ui-button" href="https://github.com/TRUEYOUNG/EBDMS" target="_blank">Repository</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <table class="gallery-table">
+                            <thead>
+                                <tr>
+                                    <th class="gallery-table-col category">Category</th>
+                                    <th class="gallery-table-col source">Source</th>
+                                    <th class="gallery-table-col keywords">Related keywords</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-th="Category"><span class="categ html">JSP</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/user/mypage_medical.jsp" target="_blank">mypage_medical.jsp</a> / 
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/WebContent/WEB-INF/views/user/mypage_confirm.jsp" target="_blank">mypage_confirm.jsp</a>
+                                    </td>
+                                    <td data-th="Related Keywords">AJAX, JSON, SweetAlert</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source">
+                                    <a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/controller/user/Welcome.java" target="_blank">Welcome.java</a>
+                                    </td>
+                                    <td data-th="Related Keywords">GET/POST, ValidCheck</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/service/user/WelcomeService.java" target="_blank">WelcomeService.java</a></td>
+                                    <td data-th="Related Keywords">업무로직 Service</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ css">JAVA</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/user/WelcomeDAO.java" target="_blank">WelcomeDAO.java</a></td>
+                                    <td data-th="Related Keywords">SqlSessionTemplate</td>
+                                </tr>
+                                <tr>
+                                    <td data-th="Category"><span class="categ js">XML</span></td>
+                                    <td data-th="Source"><a href="https://github.com/TRUEYOUNG/EBDMS/blob/master/t1p3_ebdms/src/to/na/ebdms/user/dao/user/WelcomeMapper.xml" target="_blank">WelcomeMapper.xml</a></td>
+                                    <td data-th="Related Keywords">의료기관 신청정보 입력, 의료기관 신청정보 수정</td>
                                 </tr>
                             </tbody>
                         </table>
